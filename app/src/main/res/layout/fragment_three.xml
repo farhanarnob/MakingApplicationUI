@@ -1,15 +1,21 @@
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/constraintLayout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="farhanarnob.me.makingapplicationui.MainActivity$PlaceholderFragment">
 
-    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
         android:id="@+id/textView11"
+            style="@style/textStyleMedium"
         android:layout_width="0dp"
-        android:layout_height="17dp"
+            android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
@@ -21,6 +27,7 @@
 
     <TextView
         android:id="@+id/textView18"
+        style="@style/textStyleMedium"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -34,19 +41,19 @@
 
     <TextView
         android:id="@+id/textView19"
-        android:layout_width="0dp"
+        style="@style/textStyleMedium"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:text="Phone:"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView23" />
 
     <TextView
         android:id="@+id/textView20"
+        style="@style/textStyleMedium"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -60,6 +67,7 @@
 
     <TextView
         android:id="@+id/textView21"
+        style="@style/textStyleMedium"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -73,17 +81,22 @@
 
     <TextView
         android:id="@+id/textView22"
-        android:layout_width="189dp"
+        style="@style/textStyleMedium"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:text="Year of birth:"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <TextView
         android:id="@+id/textView23"
+        style="@style/textStyleMedium"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -97,6 +110,7 @@
 
     <TextView
         android:id="@+id/textView24"
+        style="@style/textStyleMedium"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -110,6 +124,7 @@
 
     <TextView
         android:id="@+id/textView25"
+        style="@style/textStyleMedium"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -126,91 +141,83 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="231dp" />
+        app:layout_constraintGuide_percent="0.5" />
 
     <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="0dp"
+        android:id="@+id/spinner_gender"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView11"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="@+id/textView11" />
 
     <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="0dp"
+        android:id="@+id/spinner_birth"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView22"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView22"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="@+id/textView22" />
 
     <Spinner
-        android:id="@+id/spinner3"
-        android:layout_width="0dp"
-        android:layout_height="24dp"
+        android:id="@+id/spinner_marital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView18"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView18"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="@+id/textView18" />
 
     <Spinner
-        android:id="@+id/spinner4"
-        android:layout_width="0dp"
+        android:id="@+id/spinner_education"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView23"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="@+id/textView23" />
 
     <Spinner
-        android:id="@+id/spinner5"
-        android:layout_width="0dp"
+        android:id="@+id/spinner_producer"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="@+id/textView24" />
 
     <Spinner
-        android:id="@+id/spinner7"
+        android:id="@+id/spinner_phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView19"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/textView19"
         app:layout_constraintTop_toTopOf="@+id/textView19" />
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="93dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="phone"
-        app:layout_constraintBottom_toBottomOf="@+id/spinner7"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner_phone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/spinner7"
-        app:layout_constraintTop_toTopOf="@+id/spinner7" />
+        app:layout_constraintStart_toEndOf="@+id/spinner_phone"
+        app:layout_constraintTop_toTopOf="@+id/spinner_phone" />
 
     <EditText
         android:id="@+id/editText2"
@@ -230,15 +237,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="104dp" />
+        app:layout_constraintGuide_percent="0.47" />
 
-    <ImageButton
+        <ImageView
         android:id="@+id/imageButton"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:src="@mipmap/ic_launcher_round"
+            android:scaleType="centerCrop"
+            android:src="@drawable/scanner_button"
         app:layout_constraintBottom_toBottomOf="@+id/textView21"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
@@ -261,6 +269,19 @@
         app:layout_constraintStart_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toTopOf="@+id/textView25" />
 
-    <include layout="@layout/layout_button" />
+        <include
+            layout="@layout/layout_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView25"
+            app:layout_constraintVertical_bias="1.0" />
 
 </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
